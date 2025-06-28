@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="pt-30"><form action="index.html">
+    <div class="max-w-[400px] mx-auto bg-blue-400 max-h-[400px] border rounded-2xl border-4 border-amber-500 shadow-2xl shadow-blue-400">
+      <u><h1 class="text-3xl font-bold text-center pt-4 pb-8">Sign In Form</h1></u>
+       <span class="text-[20px] pl-6  font-bold">User Name: <input type="text" class="max-w-[200px] border-gray-900 border-2 pl-5 hover:border-amber-300" id="un"> </span><br><br>
+       <span class="text-[20px] pl-12  font-bold">Email Id: <input type="text" class="max-w-[200px] border-gray-900 border-2 pl-5  hover:border-amber-300" id="em"> </span><br><br>
+ <span class="text-[20px] pl-8  font-bold">Password: <input type="password" class="max-w-[200px] border-gray-900 border-2 pl-5  hover:border-amber-300" id="pass"> </span><br><br>
+  <button class="bg-amber-600 rounded-2xl border border-2 border-emerald-300 w-[110px] h-[40px] text-xl font-bold m-10 ml-35 hover:bg-emerald-500" onclick="santu()">sign in</button>
+    </div>
+    <script>
+      function santu(){
+        let a=document.getElementById("un").value;
+        let b=document.getElementById("em").value;
+        let c=document.getElementById("pass").value;
+
+        if(a==""||b==""||c=="")
+      {
+        alert("All fields required");
+      }
+      else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(b))
+      {
+        alert("Give the valid email");
+      }
+       else if(c.length !=5)
+      {
+        alert("Password should be 5 character");
+      }
+      else{
+        return true;
+      }
+      }
+    </script>
+    </form>
+</body>
+</html>
